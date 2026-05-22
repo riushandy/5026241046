@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiDBController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,15 +24,12 @@ Route::get('pertemuan5', function () {
     return view('pertemuan5');
 });
 
-Route::get('dosen', [DosenController::class, 'index']);
-Route::get('biodata', [DosenController::class, 'biodata']);
-
 Route::get('linktree', function () {
     return view('linktree');
 });
 
-Route::get('home', function () {
-    return view('home');
+Route::get('homefr', function () {
+    return view('homefrontend');
 });
 
 Route::get('unilever', function () {
@@ -53,3 +55,17 @@ Route::get('news1', function () {
 Route::get('responsive', function () {
     return view('responsive');
 });
+
+Route::get('dosen', [DosenController::class, 'index']);
+Route::get('biodata', [DosenController::class, 'biodata']);
+
+Route::get('/pegawainama/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+//blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+//crud
+Route::get('/pegawai/', [PegawaiDBController::class, 'index']);
