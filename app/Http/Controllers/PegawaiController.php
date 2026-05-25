@@ -26,4 +26,5 @@ public function proses(Request $request){
         return "Nama : " . $nama . ",<br>Umur : " . $umur .
         ", <br>Alamat : " . $alamat  ;
 }
+
 }
