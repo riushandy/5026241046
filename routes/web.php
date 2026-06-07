@@ -5,6 +5,8 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\SepatuController;
+
 
 
 
@@ -76,4 +78,11 @@ Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
 
-
+//crud sepatu
+Route::get('/sepatu/', [SepatuController::class, 'index']);
+Route::get('/sepatutambah', [SepatuController::class, 'tambah']);
+Route::post('/sepatustore', [SepatuController::class, 'store']);
+Route::get('/sepatuedit/{id}', [SepatuController::class, 'edit']);
+Route::post('/sepatuupdate', [SepatuController::class, 'update']);
+Route::get('/sepatuhapus/{id}', [SepatuController::class, 'hapus']);
+Route::get('/sepatucari', [SepatuController::class, 'cari']);

@@ -51,8 +51,8 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Pegawai</a></li>
-                    <li><a href="#why-us">PR 1</a></li>
+                    <li><a href="/pegawai" class="active">Pegawai</a></li>
+                    <li><a href="/sepatu">PR 1</a></li>
                     <li><a href="#why-us">PR 2</a></li>
                     <li><a href="#services">Pertemuan 15</a></li>
                     <li><a href="#services">EAS</a></li>
