@@ -9,6 +9,7 @@ use App\Http\Controllers\SepatuController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\EASController;
 
 
 
@@ -108,3 +109,12 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.
 Route::get('/mahasiswa/', [MahasiswaController::class, 'index']);
 Route::get('/mahasiswatambah', [MahasiswaController::class, 'tambah']);
 Route::post('/mahasiswastore', [MahasiswaController::class, 'store']);
+
+//crud EAS
+Route::get('/eas', [EASController::class, 'index'])->name('eas.index');
+Route::get('/eastambah', [EASController::class, 'create'])->name('eas.tambah');
+Route::post('/easstore', [EASController::class, 'store'])->name('eas.store');
+// Route::get('/siswa/{kodepegawai}/view', [SiswaController::class, 'view'])->name('eas.view');
+Route::get('/siswaview/{kodepegawai}', [SiswaController::class, 'view'])->name('eas.view');
+
+
