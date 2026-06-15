@@ -41,7 +41,7 @@ class EASController extends Controller
 
     public function view($kodepegawai)
     {
-        $eas = DB::table('mypegawai')->where('kodepegawai', $kodepegawai)->get();
+        $eas = DB::table('mypegawai')->where('kodepegawai', $kodepegawai)->first();
 
 		// return view('EAS/view',['mypegawai' => $mypegawai]);
                 return view('eas.view', compact('eas'));
