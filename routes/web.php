@@ -115,6 +115,6 @@ Route::get('/eas', [EASController::class, 'index'])->name('eas.index');
 Route::get('/eastambah', [EASController::class, 'create'])->name('eas.tambah');
 Route::post('/easstore', [EASController::class, 'store'])->name('eas.store');
 // Route::get('/siswa/{kodepegawai}/view', [SiswaController::class, 'view'])->name('eas.view');
-Route::get('/siswaview/{kodepegawai}', [SiswaController::class, 'view'])->name('eas.view');
+Route::get('/eas/{kodepegawai}/view', [EASController::class, 'view'])->name('eas.view');
 
 
